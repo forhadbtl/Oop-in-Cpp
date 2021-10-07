@@ -1,0 +1,26 @@
+//age calculator
+
+#include<iostream>
+using namespace std;
+int main(){
+int year_now,age_now,another_year,another_age;
+
+cout<<"Enter the current year: "; cin>>year_now;
+cout<<"Enter your current age now: "; cin>>age_now;
+cout<<"Enter the year which you wish to know your age: ";
+cin>>another_year;
+
+another_age = another_year-(year_now-age_now);
+
+if(another_age>=0){
+    cout<<endl<<"Your age in "<<another_year<<":";
+    cout<<another_age<<"\n";
+}
+
+else{
+    cout<<"You weren't even bron in";
+    cout<<another_year<<"!\n";
+}
+
+return 0;
+}
