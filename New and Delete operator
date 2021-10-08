@@ -1,0 +1,12 @@
+//introduce new and delete operator
+
+#include<iostream>
+using namespace std;
+
+int main(){
+//allocated using new operator memory space in memory for storing a integer data type
+        int *a=new int;
+        //*a = 100;
+        cout<<"The output is a="<<*a;
+        delete a;   //memory released using delete operator
+}
