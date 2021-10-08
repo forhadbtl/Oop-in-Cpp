@@ -1,0 +1,26 @@
+//scope resolution operator(::)
+
+#include<iostream>
+using namespace std;
+
+int m=10;           //global variable creation
+
+int main(){
+    int m=20;       //local variable creation
+    
+    {
+        int k=m;
+        int m=30;
+        
+        cout<<"__Inner block__"<<endl;
+        cout<<"k="<<k<<endl;
+        cout<<"m="<<m<<endl;
+        cout<<"::m="<<::m<<endl;
+    }
+    
+    cout<<"__Outer block__"<<endl;
+    cout<<"m="<<m<<endl;
+    cout<<"::m="<<::m<<endl;
+
+    return 0;
+}
