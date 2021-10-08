@@ -1,0 +1,36 @@
+//introduce class of objects
+#include<iostream>
+using namespace std;
+class item
+{
+    int number;     //private by default
+    float cost;     //private by default
+    
+public:
+    void getdata(int a,float b);    //prototype declaration to be defined
+    void putdata(void)      //function defined inside class
+    {
+        cout<<"number:"<<number<<"\n";
+        cout<<"cost:"<<cost<<"\n";
+    }
+};
+
+void item::getdata(int a,float b)    //use membership label
+{
+    number = a;      //private variable
+    cost = b;        //directly used
+}
+
+int main(){
+    item x;            //create object x
+    cout<<"no object x"<<"\n";
+    x.getdata(100,299.95);      //call member function
+    x.putdata();                //call member function
+   
+    item y;                     //create another object
+    cout<<"no object y"<<"\n";
+    y.getdata(200,175.50);
+    y.putdata();
+   
+   return 0;
+}
